@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Restaurante</title>
+    <script src="/Projeto_web/js/Calculadora_restaurante_conta.js" defer></script>
+    <link rel="stylesheet" href="/Projeto_web/css/Calculadora_restaurante_conta.css">
+    
+</head>
+<body>  
+
+<div class="container">
+    <h1>Calculadora de Restaurante</h1>
+    
+    <form onsubmit="event.preventDefault(); calc_restaurante();">
+        <div class="form-group">
+            <label for="valor">Valor da Conta (R$)</label>
+            <input type="number" id="valor" step="0.01" min="0" placeholder="0,00" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pessoa">Número de Pessoas</label>
+            <input type="number" id="pessoa" min="1" value="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gorjeta">Taxa de Serviço / Gorjeta</label>
+            <select id="gorjeta" required>
+                <option value="0">0% (Sem taxa)</option>
+                <option value="5">5%</option>
+                <option value="10" selected>10% (Padrão)</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+            </select>
+        </div>
+
+        <div class="btn-container">
+            <input type="submit" value="Calcular">
+            <input type="reset" value="Limpar" onclick="limpar_resultados()">
+        </div>
+    </form>
+
+    <div class="result-box" id="resultBox">
+        <h3>Resultado</h3>
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+        <p id="resultado4"></p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #e1e1e6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #202024;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 2px solid #483d8b;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #00adb5;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Área Principal - Grid Responsivo */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    justify-items: center;
+    width: 100%;
+}
+
+main h3{
+    color:#030303
+}
+
+/* Cards dos Projetos */
+.card-projeto {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.card-projeto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #030303;
+    min-height: 50px; /* Garante alinhamento se o texto quebrar */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilização das Imagens */
+.card-projeto img {
+    width: 100%;
+    max-width: 200px;
+    height: 220px;
+    object-fit: contain; /* Mantém a proporção dos bonequinhos das calculadoras */
+    border-radius: 12px;
+    background-color: #ffffff; /* Fundo branco para as imagens PNG */
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card-projeto a:hover img {
+    transform: scale(1.03);
+}
+
+/* Rodapé */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #7c7c8a;
+    border-top: 1px solid #29292e;
+}
